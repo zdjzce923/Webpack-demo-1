@@ -1,17 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const base = require('./webpack.config.base')
 module.exports = {
+  ...base,
   mode: 'development',
-  entry: './src/index.js',
-  output: {
-    filename: 'index.[contenthash].js',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'jinjin - 1',
-      template: './src/assets/index.html',
-    }),
-  ],
   module: {
     rules: [
       {
